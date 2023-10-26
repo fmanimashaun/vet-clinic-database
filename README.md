@@ -112,7 +112,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project send me a message to edgard.soza@gmail.com
+If you like this project send me a message on my social media
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
