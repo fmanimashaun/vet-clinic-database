@@ -47,20 +47,23 @@ CREATE TABLE vets (
 );
 
 CREATE TABLE specializations (
+  id INT GENERATED ALWAYS AS IDENTITY,
   vet_id INT,
   species_id INT,
-  PRIMARY KEY (vet_id, species_id),
   FOREIGN KEY (vet_id) REFERENCES vets(id),
-  FOREIGN KEY (species_id) REFERENCES species(id)
+  FOREIGN KEY (species_id) REFERENCES species(id),
+  PRIMARY KEY(id)
 );
 
 CREATE TABLE visits (
+  id INT GENERATED ALWAYS AS IDENTITY,
   animal_id INT,
   vet_id INT,
   visit_date DATE,
-  PRIMARY KEY (animal_id, vet_id, visit_date),
   FOREIGN KEY (animal_id) REFERENCES animals(id),
-  FOREIGN KEY (vet_id) REFERENCES vets(id)
+  FOREIGN KEY (vet_id) REFERENCES vets(id),
+  PRIMARY KEY(id)
 );
 
-
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
